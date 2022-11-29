@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "titre": "Zone De Rap",
+        "auteur": "Maahlox",
+        "annee": 2019,
+        "pochette": "assets/img/sort.jpg"
+    },
+    {
+        "id": 2,
+        "titre": "Ebanflang",
+        "auteur": "Tenor",
+        "annee": 2020,
+        "pochette": "assets/img/Tenor.jpg"
+    },
+    {
+        "id": 3,
+        "titre": "Les yeux plus gros que le monde",
+        "auteur": "BLACK M",
+        "annee": 2015,
+        "pochette": "assets/img/blackM.jpg"
+    },
+    {
+        "id": 4,
+        "titre": "Pillule rouge",
+        "auteur": "Maitre GIMS",
+        "annee": 2021,
+        "pochette": "assets/img/gims.jpg"
+    },
+    {
+        "id": 5,
+        "titre": "Gros ventre",
+        "auteur": "Nazar",
+        "annee": 2019,
+        "pochette": "assets/img/naza.jpg"
+    },
+    {
+        "id": 6,
+        "titre": "Vestige du feau",
+        "auteur": "Maitre GIMS",
+        "annee": 2022,
+        "pochette": "assets/img/gims2.jpg"
+    },
+    {
+        "id": 7,
+        "titre": "Aura corp",
+        "auteur": "HIMRA",
+        "annee": 2020,
+        "pochette": ""
+    }
+]

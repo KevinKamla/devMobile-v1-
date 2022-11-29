@@ -1,0 +1,7 @@
+{
+  "name": "tracemp3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

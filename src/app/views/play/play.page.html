@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+
+  <div class="bloc_header">
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()" >
+        <ion-icon name="close" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="bg-img">
+    <ion-card>
+      <ion-img [src]="['{{currentSon.pochette}}']"></ion-img>
+      <div class="tags">
+        <p>Maahlox le viber</p>
+        <p>2017</p>
+        <p>{{duration}} 4:33</p>
+      </div>
+    </ion-card>
+    <p class="green">Ca sort comme ça sort</p>
+
+
+    <ion-range min="0" max="100" pin="true" color="primary" value={{currentValueDuration}}
+      (ionChange)="rangeChange($event)">
+      <ion-label slot="start">{{currentValueDuration}}</ion-label>
+      <ion-label slot="end">4:33</ion-label>
+    </ion-range>
+
+
+    <div class="flex_box">
+      <ion-button shape="round" fill="clear" (click)="previewSon()">
+        <ion-icon slot="icon-only" name="play-back"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" (click)="pauseSon()" fill="clear" class="buttonPause">
+        <ion-icon slot="icon-only" name="{{pauseIcon}}"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" fill="clear" (click)="nextSon()">
+        <ion-icon slot="icon-only" name="play-forward"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" fill="clear">
+        <ion-icon slot="icon-only" name="stop"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="flex_box2">
+      <ion-button shape="round" fill="clear" (click)="volMoin()">
+        <ion-icon slot="icon-only" name="volume-low-outline"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" fill="clear" (click)="mute()">
+        <ion-icon slot="icon-only" name="volume-{{muteIcon}}-outline"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" fill="clear" (click)="volPlus()">
+        <ion-icon slot="icon-only" name="volume-medium-outline"></ion-icon> 
+      </ion-button>
+      <ion-button shape="round" fill="clear" (click)="repete()">
+        <ion-icon slot="icon-only" name="repeat-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

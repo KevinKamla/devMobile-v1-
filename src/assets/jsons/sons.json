@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "id_album": 1,
+        "titre": "Le Nkang",
+        "pochette": "assets/img/nkang.jpg",
+        "path_son": "assets/sounds/nkang.mp3"
+    },
+    {
+        "id": 2,
+        "id_album": 1,
+        "titre": "L'eau sale",
+        "pochette": "assets/img/eauSale.jpg",
+        "path_son": "assets/sounds/leau-sale.mp3"
+    },
+    {
+        "id": 3,
+        "id_album": 1,
+        "titre": "MOUF",
+        "pochette": "assets/img/mouf.jpg",
+        "path_son": "assets/sounds/mouf.mp3"
+    },
+    {
+        "id": 4,
+        "id_album": 1,
+        "titre": "Ca ne rit pas",
+        "pochette": "assets/img/canerit.jpg",
+        "path_son": "assets/sounds/ca-e-rit-pas.mp3"
+    },
+    {
+        "id": 5,
+        "id_album": 2,
+        "titre": "Bahatland",
+        "pochette": "assets/img/bahatland.jpg",
+        "path_son": "assets/sounds/bahatland.mp3"
+    },
+    {
+        "id": 6,
+        "id_album": 2,
+        "titre": "Bahat-life",
+        "pochette": "assets/img/bahat-life.jpg",
+        "path_son": "assets/sounds/bahat-life.mp3"
+    },
+    {
+        "id": 7,
+        "id_album": 2,
+        "titre": "Bahat-life-4",
+        "pochette": "assets/img/bahat-life4.jpg",
+        "path_son": "assets/sounds/bahat-life-4.mp3"
+    },
+    {
+        "id": 8,
+        "id_album": 2,
+        "titre": "Bahat-life-5",
+        "pochette": "assets/img/bahat-life5.jpg",
+        "path_son": "assets/sounds/bahat-life-5.mp3"
+    },
+    {
+        "id": 9,
+        "id_album": 3,
+        "titre": "Ailleur",
+        "pochette": "assets/img/ailleur.jpg",
+        "path_son": "assets/sounds/ailleurs.mp3"
+    },
+    {
+        "id": 10,
+        "id_album": 3,
+        "titre": "A force d'être",
+        "pochette": "assets/img/forceetre.jpg",
+        "path_son": "assets/sounds/force-detre.mp3"
+    },
+    {
+        "id": 11,
+        "id_album": 3,
+        "titre": "Jessica",
+        "pochette": "assets/img/jessica.jpg",
+        "path_son": "assets/sounds/jessica.mp3"
+    },
+    {
+        "id": 12,
+        "id_album": 2,
+        "titre": "marteau de thor",
+        "pochette": "assets/img/marteau.jpg",
+        "path_son": "assets/sounds/marteau.mp3"
+    },
+    {
+        "id": 13,
+        "id_album": 4,
+        "titre": "Habibi",
+        "pochette": "assets/img/habibi.jpg",
+        "path_son": "assets/sounds/habibi.mp3"
+    },
+    {
+        "id": 14,
+        "id_album": 4,
+        "titre": "ABCD",
+        "pochette": "assets/img/abcd.jpg",
+        "path_son": "assets/sounds/abcd.mp3"
+    },
+    {
+        "id": 15,
+        "id_album": 4,
+        "titre": "Angelina",
+        "pochette": "assets/img/angelina.jpg",
+        "path_son": "assets/sounds/angelina.mp3"
+    },
+    {
+        "id": 16,
+        "id_album": 4,
+        "titre": "Sofitelo",
+        "pochette": "assets/img/sofitelo.jpg",
+        "path_son": "assets/sounds/sofitelo.mp3"
+    },
+    {
+        "id": 17,
+        "id_album": 5,
+        "titre": "Folie",
+        "pochette": "assets/img/foli.jpg",
+        "path_son": "assets/sounds/foli.mp3"
+    },
+    {
+        "id": 18,
+        "id_album": 5,
+        "titre": "Faut pardonner",
+        "pochette": "assets/img/pardonner.jpg",
+        "path_son": "assets/sounds/pardonner.mp3"
+    },
+    {
+        "id": 19,
+        "id_album": 5,
+        "titre": "Ambulance",
+        "pochette": "assets/img/ambulance.jpg",
+        "path_son": "assets/sounds/folie.mp3"
+    },
+    {
+        "id": 20,
+        "id_album": 6,
+        "titre": "OG na OG",
+        "pochette": "assets/img/ognaog.jpg",
+        "path_son": "assets/sounds/og-na-og.mp3"
+    },
+    {
+        "id": 21,
+        "id_album": 6,
+        "titre": "Senorita",
+        "pochette": "assets/img/senorita.jpg",
+        "path_son": "assets/sounds/senorita.mp3"
+    },
+    {
+        "id": 22,
+        "id_album": 6,
+        "titre": "C'est comme ça",
+        "pochette": "assets/img/cestcommeca.jpg",
+        "path_son": "assets/sounds/comme-ca.mp3"
+    },
+    {
+        "id": 23,
+        "id_album": 7,
+        "titre": "Quatari",
+        "pochette": "assets/img/quatari.jpg",
+        "path_son": "assets/sounds/ailleurs.mp3"
+    },
+    {
+        "id": 24,
+        "id_album": 7,
+        "titre": "ICB Brutal",
+        "pochette": "assets/img/brutal.jpg",
+        "path_son": "assets/sounds/icbBrutal.mp3"
+    },
+    {
+        "id": 25,
+        "id_album": 7,
+        "titre": "Comme d'habitude",
+        "pochette": "assets/img/habitude.jpg",
+        "path_path_son": "assets/sounds/habitude.mp3"
+    }
+]
