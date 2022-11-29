@@ -8,7 +8,8 @@ ion-content {
     width: 100%;
     display: flex;
     justify-content: end;
-    ion-button{
+
+    ion-button {
         margin-right: 15px;
     }
 }
@@ -23,12 +24,11 @@ ion-content {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgb(0 0 0 / 68%), #000000), url("../../../assets/img/sort.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
     ion-card {
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .green {
@@ -56,12 +56,15 @@ ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
 .flex_box2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 10px;
 
     ion-icon {
         height: 25px;
@@ -81,22 +84,22 @@ ion-content {
 //   }
 
 
-  ion-button {
+ion-button {
     height: 80px;
     min-height: max-content;
     margin: -17px 0px;
     font-size: 15px;
-  }
+}
 
-  ion-icon {
+ion-icon {
     color: white;
-  }
+}
 
-  .hydrated {
+.hydrated {
     color: white !important;
-  }
+}
 
-  .buttonPause {
+.buttonPause {
     border: 2px solid white;
     border-radius: 45px;
-  }
+}

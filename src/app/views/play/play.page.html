@@ -8,16 +8,15 @@
     </ion-buttons>
   </div>
 
-  <div class="bg-img">
-    <ion-card><!-- {{currentSon.pochette}} -->
-      <ion-img [src]="['assets/img/eauSale.jpg']"></ion-img>
+  <div class="bg-img" [ngStyle]="{'background-image': 'linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 88%)), url('+ currentAlbum.pochette +')'}" >
+    <ion-card>
+      <img src={{currentSon.pochette}} alt="" srcset="">
       <div class="tags">
-        <p>Maahlox le viber</p>
-        <p>2017</p>
-        <p>{{duration}} 4:33</p>
+        <p>{{currentAlbum.auteur}}</p>
+        <p>{{currentAlbum.annee}}</p>
       </div>
     </ion-card>
-    <p class="green">Ca sort comme ça sort</p>
+    <p class="green">{{currentSon.titre}}</p>
 
 
     <ion-range min="0" max={{duration}} color="primary" value={{currentValueDuration}}

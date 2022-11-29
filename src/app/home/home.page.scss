@@ -85,8 +85,13 @@ ion-slides {
 
 .listSon{
   display: flex;
-  justify-content: space-between;
+  justify-content:start;
   align-items: center;
   gap: 20px;
   color: white;
+  
+  ion-avatar{
+    height: 60px;
+    width: 60px;
+  }
 }
