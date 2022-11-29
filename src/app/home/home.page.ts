@@ -32,7 +32,7 @@ export class HomePage {
     });
     
     this.HandleMusicService.loadMusic(son)
-    localStorage.setItem("sonSelected", JSON.stringify(son.id));
+    localStorage.setItem("sonIdSelected", JSON.stringify(son.id));
     await modale.present();
 
   }

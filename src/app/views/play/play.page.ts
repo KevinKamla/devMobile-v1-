@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NativeAudio } from '@capacitor-community/native-audio';
 import { IonItem, ModalController } from '@ionic/angular';
 import { HandleMusicService } from 'src/app/service/handle-music.service';
 
@@ -14,14 +15,17 @@ export class PlayPage implements OnInit {
   currentSon: any;
   currentAlbum: any;
   duration: any;
+  min: any;
+  sec: any;
+  minInit: any =0;
+  secInit: any =0;
   currentValueDuration: number = 0;
   pauseIcon: string = "pause";
   currentTabSon: any;
   volSon: number = 0.4
   muteIcon: string = "mute"
 
-  constructor(private modal: ModalController,
-    private service: HandleMusicService) { }
+  constructor(private modal: ModalController, private service: HandleMusicService) { }
 
   // Fermeture du modal(page play)
   closeModal() {
@@ -67,7 +71,7 @@ export class PlayPage implements OnInit {
   rangeChange(e: any) {
     const t = e.target.value
     this.currentValueDuration = t
-    // this.service.playSon(son, t)
+    this.service.playSon(this.currentSon, t)
   }
 
   // Baisser le volume
@@ -100,30 +104,42 @@ export class PlayPage implements OnInit {
 
 
   ngOnInit() {
-    var son = (localStorage.getItem('sonSelected'));
-    this.currentSon = son
-    console.log(" son courant : ", this.currentSon)
-    // localStorage.removeItem("sonSelected")
-    this.service.playSon(son, 0.0)
-    this.service.getSon().subscribe((res: any) => {
+    var sonId = (localStorage.getItem('sonIdSelected'));
+    localStorage.removeItem("sonIdSelected")
+    this.service.getSon().subscribe(async (res: any) => {
       this.tabSon = res
+      console.log("ListSon: ", this.tabSon)
+
+      this.currentSon = this.tabSon.filter((x: { id: any }) => x.id == sonId)[0];
+      console.log(" son courant : ", this.currentSon)
+      this.service.playSon(this.currentSon, 0.0)
+
+      // Duree du son  
+      setTimeout(() => {
+        this.service.getDuration(this.currentSon).then((e) => {
+          this.duration = e.duration;
+          console.log("duree son : ", this.duration)
+          this.min = Math.floor(this.duration/60)
+          this.sec = Math.floor(((this.duration/60)-this.min/60)*60)
+          console.log("min : ", this.min, "sec : ", this.sec)
+        })
+      }, 100)
+
     });
+
+
 
     this.service.getAlbum().subscribe((res: any) => {
       this.tabAlbum = res
-      console.log("album courant : ", this.tabAlbum)
-      this.currentAlbum = this.tabAlbum.filter((item: any) => {
-        item.id == this.currentSon.id_album
-      })
-      console.log("album courant : ", this.currentAlbum)
-    });
+      console.log("album  : ", this.tabAlbum)
 
-    // Duree du son 
-    this.duration = this.service.getDuration(son)
-    console.log("duree son : ", this.duration)
-//
-    this.currentTabSon = this.tabSon.filter((item: any) => {
-      item.id_album = this.currentSon.id_album;
+      this.currentAlbum = this.tabAlbum.filter((item: { id: any }) => item.id == this.currentSon.id_album)[0]
+      console.log("album courant : ", this.currentAlbum)
+
+      this.currentTabSon = this.tabSon.filter((item: { id_album: any }) => item.id_album == this.currentSon.id_album);
+      console.log("currentTabSon :", this.currentTabSon)
+
+
     });
 
 

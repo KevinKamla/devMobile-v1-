@@ -13,11 +13,11 @@ export class HandleMusicService {
     return this.http.get("assets/jsons/sons.json")
   }
 
-  getAlbum(){
+  getAlbum() {
     return this.http.get("assets/jsons/album.json")
   }
 
-  
+
   async loadMusic(son: any) {
     await NativeAudio.preload({
       assetId: son.id.toString(),
@@ -41,38 +41,37 @@ export class HandleMusicService {
   }
 
   async getDuration(son: any) {
-    const duree = await NativeAudio.getDuration({
+    return await NativeAudio.getDuration({
       assetId: son.id.toString(),
     });
-    return duree.duration
   }
 
 
-  pause(son:any){
+  pause(son: any) {
     NativeAudio.pause({
       assetId: son.id.toString(),
     });
   }
 
-  resume(son:any){
+  resume(son: any) {
     NativeAudio.resume({
       assetId: son.id.toString(),
     });
   }
 
-  repete(son:any){
+  repete(son: any) {
     NativeAudio.loop({
       assetId: son.id.toString()
     });
   }
 
-  unload(son:any){
+  unload(son: any) {
     NativeAudio.unload({
       assetId: son.id.toString()
     });
   }
 
-  setVolume(son:any, vol: number){
+  setVolume(son: any, vol: number) {
     NativeAudio.setVolume({
       assetId: son.id.toString(),
       volume: vol

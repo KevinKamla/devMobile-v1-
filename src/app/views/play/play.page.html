@@ -3,14 +3,14 @@
   <div class="bloc_header">
     <ion-buttons slot="end">
       <ion-button (click)="closeModal()" >
-        <ion-icon name="close" color="primary"></ion-icon>
+        <ion-icon name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
   </div>
 
   <div class="bg-img">
-    <ion-card>
-      <ion-img [src]="['{{currentSon.pochette}}']"></ion-img>
+    <ion-card><!-- {{currentSon.pochette}} -->
+      <ion-img [src]="['assets/img/eauSale.jpg']"></ion-img>
       <div class="tags">
         <p>Maahlox le viber</p>
         <p>2017</p>
@@ -20,10 +20,10 @@
     <p class="green">Ca sort comme ça sort</p>
 
 
-    <ion-range min="0" max="100" pin="true" color="primary" value={{currentValueDuration}}
+    <ion-range min="0" max={{duration}} color="primary" value={{currentValueDuration}}
       (ionChange)="rangeChange($event)">
-      <ion-label slot="start">{{currentValueDuration}}</ion-label>
-      <ion-label slot="end">4:33</ion-label>
+      <ion-label slot="start">{{minInit}}:{{secInit}}</ion-label>
+      <ion-label slot="end">{{min}}:{{sec}}</ion-label>
     </ion-range>
 
 
