@@ -1,0 +1,8 @@
+.bloc_album{
+    background-color: black;
+    .tags{
+        display: grid;
+        justify-content: center;
+        gap: 5px;
+    }
+}

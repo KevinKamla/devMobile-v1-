@@ -19,7 +19,7 @@
   <ion-slides [options]="swipper" pager="md">
     <ion-slide *ngFor="let son of miniListSon">
       <ion-card  (click)="openModalPlay(son)">
-        <img src={{son.pochette}} alt=""  [routerLink]="['']">
+        <img src={{son.pochette}} alt="" >
       </ion-card>
     </ion-slide>
   </ion-slides>
@@ -31,11 +31,11 @@
     </div>
     <div>
       <ion-item *ngFor="let son of ListSon">
-        <ion-card (click)="openModalPlay(son)" [routerLink]="['']">
+        <ion-card (click)="openModalPlay(son)">
           <div class="listSon">
-            <ion-avatar>
+            <ion-thumbnail>
               <img src={{son.pochette}} alt="">
-            </ion-avatar>
+            </ion-thumbnail>
             <h5>{{son.titre}}</h5>
           </div>
         </ion-card>

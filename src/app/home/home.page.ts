@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HandleMusicService } from '../service/handle-music.service';
 import { PlayPage } from '../views/play/play.page';
-import { ModalController } from '@ionic/angular';
+import { IonRouterOutlet, ModalController } from '@ionic/angular';
 
 
 
@@ -13,7 +13,7 @@ import { ModalController } from '@ionic/angular';
 export class HomePage {
 
   constructor(private HandleMusicService: HandleMusicService,
-    private modal: ModalController) { }
+    private modal: ModalController, private routerOutlet: IonRouterOutlet) { }
 
   miniListSon: any = []
   ListSon: any = []
@@ -28,7 +28,9 @@ export class HomePage {
 
   async openModalPlay(son:any) {
     const modale = await this.modal.create({
-      component: PlayPage
+      component: PlayPage,
+      swipeToClose:true,
+      presentingElement: await this.modal.getTop() 
     });
     
     this.HandleMusicService.loadMusic(son)
