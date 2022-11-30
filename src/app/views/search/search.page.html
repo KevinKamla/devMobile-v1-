@@ -1,21 +1,17 @@
 <ion-header>
-  <ion-toolbar color="netfly-dark">
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-    <ion-title>son</ion-title>
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/search']"> 
-        <ion-icon name="search"></ion-icon>
-      </ion-button>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title>search</ion-title>
   </ion-toolbar>
+  <ion-searchbar placeholder="Enrer le titre" inputmode="decimal" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250" showCancelButton="always"></ion-searchbar>
 </ion-header>
 
 <ion-content color="netfly-dark">
 
   <div>
-    <ion-item *ngFor="let son of currentTabSon">
+    <ion-item *ngFor="let son of tabSearchResult">
       <ion-card (click)="openModalPlay(son)">
         <div class="listSon">
           <ion-thumbnail>

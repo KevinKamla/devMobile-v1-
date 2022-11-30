@@ -13,7 +13,11 @@ const routes: Routes = [
   {
     path: 'son:/id',
     loadChildren: () => import('./views/son/son.module').then( m => m.SonPageModule)
+  },  {
+    path: 'search',
+    loadChildren: () => import('./views/search/search.module').then( m => m.SearchPageModule)
   }
+
 
 ];
 
