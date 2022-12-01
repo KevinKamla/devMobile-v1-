@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="netfly-dark">
     <ion-title>album</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['../search']"> 
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="netfly-dark">
+<!--[routerLink]="['/details-pays', this.item.drapeau]-->
+
+  <div class="bloc_album" color="netfly-dark">
+    <ion-item *ngFor="let item of tabAlbum">
+      <ion-card color="netfly-dark" [routerLink]="['son']" (click)="navigate(item)">
+        <img src={{item.pochette}} alt="" srcset="">
+        <div class="tags">
+          <p>{{item.auteur}} - {{item.titre}}</p>
+          <p>Nombre de music ({{item.nbSon}})</p>
+        </div>
+      </ion-card>
+    </ion-item>
+
+  </div>
 
 </ion-content>

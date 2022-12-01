@@ -9,7 +9,16 @@ const routes: Routes = [
   {
     path: 'play',
     loadChildren: () => import('./views/play/play.module').then( m => m.PlayPageModule)
+  },
+  {
+    path: 'son:/id',
+    loadChildren: () => import('./views/son/son.module').then( m => m.SonPageModule)
+  },  {
+    path: 'search',
+    loadChildren: () => import('./views/search/search.module').then( m => m.SearchPageModule)
   }
+
+
 ];
 
 @NgModule({

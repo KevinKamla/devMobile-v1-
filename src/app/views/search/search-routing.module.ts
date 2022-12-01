@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AlbumPage } from './album.page';
+import { SearchPage } from './search.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AlbumPage
-  },
-  {
-    path: 'son',
-    loadChildren: () => import('../../views/son/son.module').then( m => m.SonPageModule)
+    component: SearchPage
   }
 ];
 
@@ -18,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AlbumPageRoutingModule {}
+export class SearchPageRoutingModule {}

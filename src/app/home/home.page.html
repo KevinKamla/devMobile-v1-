@@ -1,13 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="netfly-dark">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
     <ion-title class="ion-text-center">
       <img class="logo-header" src="assets/img/trace.png">
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button [routerLink]="['../search']"> 
         <ion-icon name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -19,7 +16,7 @@
   <ion-slides [options]="swipper" pager="md">
     <ion-slide *ngFor="let son of miniListSon">
       <ion-card  (click)="openModalPlay(son)">
-        <img src={{son.pochette}} alt=""  [routerLink]="['']">
+        <img src={{son.pochette}} alt="" >
       </ion-card>
     </ion-slide>
   </ion-slides>
@@ -31,11 +28,11 @@
     </div>
     <div>
       <ion-item *ngFor="let son of ListSon">
-        <ion-card (click)="openModalPlay(son)" [routerLink]="['']">
+        <ion-card (click)="openModalPlay(son)">
           <div class="listSon">
-            <ion-avatar>
+            <ion-thumbnail>
               <img src={{son.pochette}} alt="">
-            </ion-avatar>
+            </ion-thumbnail>
             <h5>{{son.titre}}</h5>
           </div>
         </ion-card>

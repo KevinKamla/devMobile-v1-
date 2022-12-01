@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="netfly-dark">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>son</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/search']"> 
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="netfly-dark">
+
+  <div>
+    <ion-item *ngFor="let son of currentTabSon">
+      <ion-card (click)="openModalPlay(son)">
+        <div class="listSon">
+          <ion-thumbnail>
+            <img src={{son.pochette}} alt="">
+          </ion-thumbnail>
+          <h5>{{son.titre}}</h5>
+        </div>
+      </ion-card>
+    </ion-item>
+  </div>
+
+</ion-content>

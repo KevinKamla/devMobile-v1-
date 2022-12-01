@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Enrer le titre" inputmode="decimal" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250" showCancelButton="always"></ion-searchbar>
+</ion-header>
+
+<ion-content color="netfly-dark">
+
+  <div>
+    <ion-item *ngFor="let son of tabSearchResult">
+      <ion-card (click)="openModalPlay(son)">
+        <div class="listSon">
+          <ion-thumbnail>
+            <img src={{son.pochette}} alt="">
+          </ion-thumbnail>
+          <h5>{{son.titre}}</h5>
+        </div>
+      </ion-card>
+    </ion-item>
+  </div>
+
+</ion-content>
