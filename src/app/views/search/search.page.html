@@ -1,11 +1,10 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar  color="netfly-dark">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>search</ion-title>
   </ion-toolbar>
-  <ion-searchbar placeholder="Enrer le titre" inputmode="decimal" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250" showCancelButton="always"></ion-searchbar>
+  <ion-searchbar placeholder="Enrer le titre" (ionChange)="onSearchChange($event)"  color="netfly-dark"></ion-searchbar>
 </ion-header>
 
 <ion-content color="netfly-dark">

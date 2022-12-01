@@ -7,7 +7,7 @@ ion-content {
     z-index: 9;
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     ion-button {
         margin-right: 15px;
@@ -50,6 +50,11 @@ ion-content {
     font-size: small;
 }
 
+.bloc_range{
+    position: absolute;
+    bottom: 160px;
+    width: 100%;
+}
 
 .flex_box {
     height: 80px;
@@ -57,6 +62,14 @@ ion-content {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+}
+
+.ion-range{
+    position: absolute;
+    bottom: 60px;
 }
 
 .flex_box2 {
@@ -72,17 +85,6 @@ ion-content {
         width: 25px;
     }
 }
-
-//   .flex_box3 {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-
-//     ion-icon {
-//       height: 25px;
-//       width: 25px;
-//     }
-//   }
 
 
 ion-button {

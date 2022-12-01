@@ -56,20 +56,20 @@ ion-slides {
   }
 }
 
-.swiper-slide-active {
-  transform: scale(1.05, 1.05);
-  z-index: 99;
-  ion-card {
-    width: 310px;
-    height: 215px;
-    border-radius: 15px;
+// .swiper-slide-active {
+//   transform: scale(1.05, 1.05);
+//   z-index: 99;
+//   ion-card {
+//     width: 310px;
+//     height: 215px;
+//     border-radius: 15px;
 
-    img {
-      width: auto;
-      transform: scale(1, 1);
-    }
-  }
-}
+//     img {
+//       width: auto;
+//       transform: scale(1, 1);
+//     }
+//   }
+// }
 
 .box-title {
   display: flex;
@@ -85,9 +85,9 @@ ion-slides {
 
 .listSon{
   display: flex;
-  justify-content:start;
+  justify-content:flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   color: white;
   
   ion-thumbnail{

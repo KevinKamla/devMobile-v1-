@@ -25,7 +25,7 @@ export class PlayPage implements OnInit {
   currentTabSon: any;
   volSon: number = 0.4
   muteIcon: string = "mute"
-  temps:any = 1000
+  temps: any = 1000
 
   constructor(private modal: ModalController, private service: HandleMusicService) { }
 
@@ -94,9 +94,16 @@ export class PlayPage implements OnInit {
     const t = e.target.value
     // console.log("time change : ", t);
     this.currentValueDuration = t
-    this.minInit = Math.floor(t / 60)
-    this.secInit = Math.floor(((t / 60) - this.minInit / 60) * 60)
-    this.service.playSon(this.currentSon, t)
+    if (this.minInit < this.min) {
+      this.minInit = Math.floor(t / 60)
+      this.secInit = Math.floor(((t / 60) - this.minInit / 60) * 60)
+    } else {
+      if (this.minInit = this.min) {
+        if (this.secInit < this.sec) this.secInit = Math.floor(((t / 60) - this.minInit / 60) * 60)
+      }
+    }
+
+    // this.service.playSon(this.currentSon, t)
   }
 
   // Baisser le volume
@@ -154,7 +161,7 @@ export class PlayPage implements OnInit {
           this.sec = Math.floor(((this.duration / 60) - this.min / 60) * 60)
           console.log("min : ", this.min, "sec : ", this.sec)
         })
-        
+
         setInterval(() => {
           console.log("duree son : ", this.duration)
           if (this.currentValueDuration == Math.floor(this.duration)) {
@@ -163,7 +170,7 @@ export class PlayPage implements OnInit {
             this.currentValueDuration += 1
             console.log("progress bar ..... : ", this.currentValueDuration);
           }
-        },  this.temps)
+        }, this.temps)
       }, this.temps)
     });
     // ===================== Les albums =====================================================

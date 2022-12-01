@@ -1,14 +1,18 @@
 <ion-content [fullscreen]="true">
 
   <div class="bloc_header">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="closeModal()" >
+      <ion-button (click)="closeModal()">
         <ion-icon name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
   </div>
 
-  <div class="bg-img" [ngStyle]="{'background-image': 'linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 88%)), url('+ currentAlbum.pochette +')'}" >
+  <div class="bg-img"
+    [ngStyle]="{'background-image': 'linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 88%)), url('+ currentAlbum.pochette +')'}">
     <ion-card>
       <img src={{currentSon.pochette}} alt="" srcset="">
       <div class="tags">
@@ -18,13 +22,13 @@
     </ion-card>
     <p class="green">{{currentSon.titre}}</p>
 
-
-    <ion-range min="0" max={{duration}} color="primary" value={{currentValueDuration}}
-      (ionChange)="rangeChange($event)">
-      <ion-label slot="start">{{minInit}}:{{secInit}}</ion-label>
-      <ion-label slot="end">{{min}}:{{sec}}</ion-label>
-    </ion-range>
-
+    <div color="netfly-dark" class="bloc_range">
+      <ion-range min="0" max={{duration}} color="primary" value={{currentValueDuration}}
+        (ionChange)="rangeChange($event)">
+        <ion-label slot="start">{{minInit}}:{{secInit}}</ion-label>
+        <ion-label slot="end">{{min}}:{{sec}}</ion-label>
+      </ion-range>
+    </div>
 
     <div class="flex_box">
       <ion-button shape="round" fill="clear" (click)="previewSon()">
@@ -49,7 +53,7 @@
         <ion-icon slot="icon-only" name="volume-{{muteIcon}}-outline"></ion-icon>
       </ion-button>
       <ion-button shape="round" fill="clear" (click)="volPlus()">
-        <ion-icon slot="icon-only" name="volume-medium-outline"></ion-icon> 
+        <ion-icon slot="icon-only" name="volume-medium-outline"></ion-icon>
       </ion-button>
       <ion-button shape="round" fill="clear" (click)="repete()">
         <ion-icon slot="icon-only" name="repeat-outline"></ion-icon>

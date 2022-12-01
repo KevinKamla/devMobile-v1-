@@ -48,7 +48,7 @@ export class HomePage {
   ngOnInit() {
     this.HandleMusicService.getSon().subscribe((rep:any) => {
       this.ListSon = rep;
-      const List: any = [this.ListSon[0], this.ListSon[6], this.ListSon[12], this.ListSon[17], this.ListSon[23]]
+      const List: any = [this.ListSon[0], this.ListSon[6], this.ListSon[15], this.ListSon[17], this.ListSon[23]]
       this.miniListSon = List
       console.log("ListSon", this.ListSon)
       console.log("miniListSon", this.miniListSon)
