@@ -4,7 +4,7 @@
         "id_album": 1,
         "titre": "Le Nkang",
         "pochette": "assets/img/nkang.jpg",
-        "path_son": "sounds/nkang.mp3"
+        "path_son": "sounds/maa.mp3"
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         "id_album": 1,
         "titre": "Ca ne rit pas",
         "pochette": "assets/img/canerit.jpg",
-        "path_son": "sounds/ca-e-rit-pas.mp3"
+        "path_son": "sounds/ca-ne-rit-pas.mp3"
     },
     {
         "id": 5,
